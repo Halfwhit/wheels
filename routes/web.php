@@ -12,7 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('splash');
+});
+
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/news', function () {
+    return view('splash');
+});
+
+Route::get('/contact', function () {
+    return view('splash');
+});
+
+Route::get('/contact', function () {
+    return view('splash');
 });
 
 Auth::routes();
