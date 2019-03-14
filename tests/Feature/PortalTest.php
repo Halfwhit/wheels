@@ -12,156 +12,86 @@ class PortalTest extends TestCase
 
     private $response;
 
-    public function testGuestVisitsTheSplashPage() {
+    public function testVisitTheSplashPage() {
         $this->whenIVisitTheSplashPage();
         $this->thenIWillSeeTheSplashPage();
     }
 
     protected function whenIVisitTheSplashPage() {
-
         $this->response = $this->get('/');
-
     }
 
     protected function thenIWillSeeTheSplashPage() {
-
         $this->response->assertViewIs('splash');
     }
 
-    public function testGuestVisitsTheAboutPage() {
-
-        $this->givenIAmAGuest();
+    public function testVisitTheAboutPage() {
         $this->whenIVisitTheAboutPage();
         $this->thenIWillSeeTheAboutPage();
-        $this->andIWillSeeCompanyInformation();
     }
 
 
     protected function whenIVisitTheAboutPage() {
-
-        $this->markTestIncomplete('Time to code');
-
+        $this->response = $this->get('/about');
     }
 
     protected function thenIWillSeeTheAboutPage() {
-
-        $this->markTestIncomplete('Time to code');
-
+        $this->response->assertViewIs('about');
     }
 
-    protected function andIWillSeeCompanyInformation() {
-
-        $this->markTestIncomplete('Time to code');
-
-    }
-
-    public function testGuestVisitsTheNewsPage() {
-
-        $this->givenIAmAGuest();
+    public function testVisitTheNewsPage() {
         $this->whenIVisitTheNewsPage();
         $this->thenIWillSeeTheNewsPage();
-        $this->andIWillSeeTheLatestNews();
     }
 
-
     protected function whenIVisitTheNewsPage() {
-
-        $this->markTestIncomplete('Time to code');
-
+        $this->response = $this->get('/news');
     }
 
     protected function thenIWillSeeTheNewsPage() {
-
-        $this->markTestIncomplete('Time to code');
-
+        $this->response->assertViewIs('news');
     }
 
-    protected function andIWillSeeTheLatestNews() {
-
-        $this->markTestIncomplete('Time to code');
-
-    }
-
-    public function testGuestVisitsTheOnlineShowroom() {
-
-        $this->givenIAmAGuest();
+    public function testVisitTheOnlineShowroom() {
         $this->whenIVisitTheOnlineShowroom();
-        $this->thenIWillBeRedirects();
-        $this->andIWillSeeTheRegistrationPage();
+        $this->thenIWillSeeTheOnlineShowroom();
     }
-
 
     protected function whenIVisitTheOnlineShowroom() {
-
-        $this->markTestIncomplete('Time to code');
-
+        $this->response = $this->get('/showroom');
     }
 
-    protected function thenIWillBeRedirects() {
-
-        $this->markTestIncomplete('Time to code');
-
+    protected function thenIWillSeeTheOnlineShowroom() {
+        $this->response->assertViewIs('showroom');
     }
 
     protected function andIWillSeeTheRegistrationPage() {
-
-        $this->markTestIncomplete('Time to code');
-
+        $this->response->assertViewIs('auth.register');
     }
 
-    public function testGuestVisitsTheServicesPage() {
-
-        $this->givenIAmAGuest();
+    public function testVisitTheServicesPage() {
         $this->whenIVisitTheServicesPage();
         $this->thenIWillSeeTheServicesPage();
-        $this->andIWillSeeTheServicesAvailable();
     }
 
-
     protected function whenIVisitTheServicesPage() {
-
-        $this->markTestIncomplete('Time to code');
-
+        $this->response = $this->get('/services');
     }
 
     protected function thenIWillSeeTheServicesPage() {
-
-        $this->markTestIncomplete('Time to code');
-
+        $this->response->assertViewIs('services');
     }
 
-    protected function andIWillSeeTheServicesAvailable() {
-
-        $this->markTestIncomplete('Time to code');
-
-    }
-
-    public function testGuestVisitsTheContactPage() {
-
-        $this->givenIAmAGuest();
+    public function testVisitTheContactPage() {
         $this->whenIVisitTheContactPage();
         $this->thenIWillSeeTheContactPage();
-        $this->andIWillSeeTheContactInformation();
     }
 
-
     protected function whenIVisitTheContactPage() {
-
-        $this->markTestIncomplete('Time to code');
-
+        $this->response = $this->get('/contact');
     }
 
     protected function thenIWillSeeTheContactPage() {
-
-        $this->markTestIncomplete('Time to code');
-
+        $this->response->assertViewIs('contact');
     }
-
-    protected function andIWillSeeTheContactInformation() {
-
-        $this->markTestIncomplete('Time to code');
-
-    }
-
-
 }

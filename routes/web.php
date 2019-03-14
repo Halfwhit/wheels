@@ -20,15 +20,19 @@ Route::get('/about', function () {
 });
 
 Route::get('/news', function () {
-    return view('splash');
+    return view('news');
+});
+
+Route::get('/showroom', function () {
+    return view('showroom');
+});
+
+Route::get('/services', function () {
+    return view('services');
 });
 
 Route::get('/contact', function () {
-    return view('splash');
-});
-
-Route::get('/contact', function () {
-    return view('splash');
+    return view('contact');
 });
 
 Auth::routes();
