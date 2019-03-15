@@ -27,20 +27,12 @@ class NavbarTest extends DuskTestCase
 
     protected function whenIVisitAnyPage()
     {
-        $this->markTestIncomplete('Time to code');
-
-        $this->browser->visit('/');
-        //and in the next step
-        //$this->browser->assertSee('Laravel');
+       $this->browser->visit('/');
     }
 
     protected function thenIShouldSeeTheNavbarAtTheTopOfThePage()
     {
-        $this->markTestIncomplete('Time to code');
-
-        $this->browser->visit('/');
-        //and in the next step
-        //$this->browser->assertSee('Laravel');
+        $this->browser->assertVisible('@navbar');
     }
 
     public function testNavbarLinksWork()
@@ -48,6 +40,7 @@ class NavbarTest extends DuskTestCase
 
         $this->browse(function (Browser $browser) {
             $this->browser = $browser;
+            $this->whenIVisitAnyPage();
             $this->whenIClickALinkInTheNavbar();
             $this->thenISeeTheExpectedPage();
         });
@@ -56,20 +49,12 @@ class NavbarTest extends DuskTestCase
 
     protected function whenIClickALinkInTheNavbar()
     {
-        $this->markTestIncomplete('Time to code');
-
-        $this->browser->visit('/');
-        //and in the next step
-        //$this->browser->assertSee('Laravel');
+        $this->browser->clickLink('About');
     }
 
     protected function thenISeeTheExpectedPage()
     {
-        $this->markTestIncomplete('Time to code');
-
-        $this->browser->visit('/');
-        //and in the next step
-        //$this->browser->assertSee('Laravel');
+        $this->browser->assertTitleContains('About');
     }
 
 
