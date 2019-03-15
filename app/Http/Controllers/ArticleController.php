@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['auth', 'is_admin'])->only('create');
+    }
+
     /**
      * Display a listing of the resource.
      *
