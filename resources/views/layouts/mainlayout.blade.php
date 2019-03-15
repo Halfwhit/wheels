@@ -12,8 +12,6 @@
 <body>
 @include('include.navbar')
 <div class="flex-center position-ref full-height">
-
-
     @include('include.header')
 
     <div class="container">
