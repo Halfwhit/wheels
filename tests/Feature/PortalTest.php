@@ -49,7 +49,7 @@ class PortalTest extends TestCase
     }
 
     protected function thenIWillSeeTheNewsPage() {
-        $this->response->assertViewIs('news');
+        $this->response->assertViewIs('news.index');
     }
 
     public function testVisitTheOnlineShowroom() {

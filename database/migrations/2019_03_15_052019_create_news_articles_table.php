@@ -15,9 +15,9 @@ class CreateNewsArticlesTable extends Migration
     {
         Schema::create('news_articles', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('image')->default('https://via.placeholder.com/1068x350?text=News+Article+Placeholder+Image');
             $table->string('title');
             $table->text('overview');
+            $table->string('image')->default('https://via.placeholder.com/1068x350?text=News+Article+Placeholder+Image');
             $table->timestamps();
         });
     }

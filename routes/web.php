@@ -11,17 +11,17 @@
 |
 */
 
-Route::get('/', 'PortalController@splash');
+Route::view('/', 'splash');
 
-Route::get('/about', 'PortalController@about');
+Route::view('/about', 'about');
 
-Route::get('/news', 'PortalController@news');
+Route::resource('/news', 'NewsArticleController');
 
-Route::get('/showroom', 'PortalController@showroom');
+Route::view('/showroom', 'showroom');
 
-Route::get('/services', 'PortalController@services');
+Route::view('/services', 'services');
 
-Route::get('/contact', 'PortalController@contact');
+Route::view('/contact', 'contact');
 
 Auth::routes();
 
