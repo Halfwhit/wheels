@@ -11,29 +11,17 @@
 |
 */
 
-Route::get('/', function () {
-    return view('splash');
-});
+Route::get('/', 'PortalController@splash');
 
-Route::get('/about', function () {
-    return view('about');
-});
+Route::get('/about', 'PortalController@about');
 
-Route::get('/news', function () {
-    return view('news');
-});
+Route::get('/news', 'PortalController@news');
 
-Route::get('/showroom', function () {
-    return view('showroom');
-});
+Route::get('/showroom', 'PortalController@showroom');
 
-Route::get('/services', function () {
-    return view('services');
-});
+Route::get('/services', 'PortalController@services');
 
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/contact', 'PortalController@contact');
 
 Auth::routes();
 
