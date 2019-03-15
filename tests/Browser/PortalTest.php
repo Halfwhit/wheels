@@ -31,7 +31,7 @@ class PortalTest extends DuskTestCase
 
     protected function thenIWillSeeTheSplashPage()
     {
-        $this->browser->assertSee('Splash');
+        $this->browser->assertTitleContains('Welcome');
     }
 
     public function testVisitTheAboutPage()
@@ -50,7 +50,7 @@ class PortalTest extends DuskTestCase
 
     protected function thenIWillSeeTheAboutPage()
     {
-        $this->browser->assertSee('About');
+        $this->browser->assertTitleContains('About');
     }
 
     public function testVisitTheNewsPage()
@@ -69,7 +69,7 @@ class PortalTest extends DuskTestCase
 
     protected function thenIWillSeeTheNewsPage()
     {
-        $this->browser->assertSee('News');
+        $this->browser->assertTitleContains('News');
     }
 
     public function testGuestVisitsTheOnlineShowroom()
@@ -88,7 +88,7 @@ class PortalTest extends DuskTestCase
 
     protected function thenIWillSeeTheOnlineShowroomPage()
     {
-        $this->browser->assertSee('Showroom');
+        $this->browser->assertTitleContains('Showroom');
     }
 
     public function testVisitTheServicesPage()
@@ -107,7 +107,7 @@ class PortalTest extends DuskTestCase
 
     protected function thenIWillSeeTheServicesPage()
     {
-        $this->browser->assertSee('Services');
+        $this->browser->assertTitleContains('Services');
     }
 
     public function testVisitTheContactPage()
@@ -126,6 +126,6 @@ class PortalTest extends DuskTestCase
 
     protected function thenIWillSeeTheContactPage()
     {
-        $this->browser->assertSee('Contact');
+        $this->browser->assertTitleContains('Contact');
     }
 }

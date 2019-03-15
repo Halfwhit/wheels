@@ -18,7 +18,7 @@ class CreateArticlesTable extends Migration
             $table->string('image')->default("https://via.placeholder.com/1068x350?text=News+Article+Placeholder+Image");
             $table->string('title');
             $table->text('overview');
-            $table->longText('fulltext');
+            $table->text('fulltext');
             $table->timestamps();
         });
     }

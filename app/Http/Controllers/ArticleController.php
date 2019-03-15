@@ -40,9 +40,10 @@ class ArticleController extends Controller
         $validated = request()->validate([
             'title' => 'required',
             'overview' => 'required',
+            'fulltext' => 'required',
         ]);
 
-        NewsArticle::create($validated);
+        Article::create($validated);
 
         return redirect('/article');
     }
@@ -55,7 +56,7 @@ class ArticleController extends Controller
      */
     public function show(Article $article)
     {
-        //
+        return view('article.show', compact('article'));
     }
 
     /**

@@ -7,6 +7,6 @@ $factory->define(Article::class, function (Faker $faker) {
     return [
             'title' => $faker->sentence,
             'overview' => $faker->paragraph,
-            'fulltext' => $faker->text,
+            'fulltext' => $faker->paragraph,
     ];
 });

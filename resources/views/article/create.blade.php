@@ -1,15 +1,15 @@
 @extends('layouts.mainlayout')
 
-@section('title', "Create News Article - Whittington's Wheels")
+@section('title', "Write Article - Whittington's Wheels")
 
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Create News Article</div>
+                    <div class="card-header">Create New Article</div>
                     <div class="card-body">
-                        <form method="post" action="/news">
+                        <form method="post" action="/article">
                             {{csrf_field()}}
                             <div class="form-group">
                                 <label for="image">Image URL</label>
@@ -21,9 +21,13 @@
                             </div>
                             <div class="form-group">
                                 <label for="overview">Article Overview</label>
-                                <textarea class="form-control" id="overview" name="overview" rows="10"></textarea>
+                                <textarea class="form-control" id="overview" name="overview"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary">Post Article</button>
+                            <div class="form-group">
+                                <label for="fulltext">Article Contents</label>
+                                <textarea class="form-control" id="fulltext" name="fulltext" rows="10"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-dark">Post Article</button>
                         </form>
                     </div>
                 </div>
