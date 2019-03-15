@@ -2,7 +2,6 @@
 
 namespace Tests\Unit;
 
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
@@ -30,7 +29,6 @@ class PortalTest extends TestCase
         $this->whenIVisitTheAboutPage();
         $this->thenIWillSeeTheAboutPage();
     }
-
 
     protected function whenIVisitTheAboutPage() {
         $this->response = $this->get('/about');
