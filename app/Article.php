@@ -4,9 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class NewsArticle extends Model
+class Article extends Model
 {
     protected $fillable = [
-      'title', 'overview', 'image',
+        'image', 'title', 'overview', 'fulltext'
     ];
 }

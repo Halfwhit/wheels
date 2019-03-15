@@ -64,7 +64,7 @@ class PortalTest extends DuskTestCase
 
     protected function whenIVisitTheNewsPage()
     {
-        $this->browser->visit('/news');
+        $this->browser->visit('/article');
     }
 
     protected function thenIWillSeeTheNewsPage()

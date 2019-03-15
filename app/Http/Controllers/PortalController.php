@@ -18,7 +18,7 @@ class PortalController extends Controller
 
     public function news()
     {
-        return view('news');
+        return view('article');
     }
 
     public function showroom()

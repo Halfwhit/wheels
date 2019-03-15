@@ -15,7 +15,7 @@ Route::view('/', 'splash');
 
 Route::view('/about', 'about');
 
-Route::resource('/news', 'NewsArticleController');
+Route::resource('/article', 'ArticleController');
 
 Route::view('/showroom', 'showroom');
 

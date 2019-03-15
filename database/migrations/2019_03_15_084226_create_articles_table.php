@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNewsArticlesTable extends Migration
+class CreateArticlesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,12 @@ class CreateNewsArticlesTable extends Migration
      */
     public function up()
     {
-        Schema::create('news_articles', function (Blueprint $table) {
+        Schema::create('articles', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('image')->default("https://via.placeholder.com/1068x350?text=News+Article+Placeholder+Image");
             $table->string('title');
             $table->text('overview');
-            $table->string('image')->default('https://via.placeholder.com/1068x350?text=News+Article+Placeholder+Image');
+            $table->longText('fulltext');
             $table->timestamps();
         });
     }
@@ -29,6 +30,6 @@ class CreateNewsArticlesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('news_articles');
+        Schema::dropIfExists('articles');
     }
 }

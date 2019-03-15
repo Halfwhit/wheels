@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\NewsArticle;
+use App\Article;
 use Illuminate\Http\Request;
 
-class NewsArticleController extends Controller
+class ArticleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class NewsArticleController extends Controller
      */
     public function index()
     {
-        $newsArticles = NewsArticle::all();
+        $articles = Article::all();
 
-        return view('news.index', compact('newsArticles'));
+        return view('article.index', compact('articles'));
     }
 
     /**
@@ -26,7 +26,7 @@ class NewsArticleController extends Controller
      */
     public function create()
     {
-        return view('news.create');
+        return view('article.create');
     }
 
     /**
@@ -44,27 +44,27 @@ class NewsArticleController extends Controller
 
         NewsArticle::create($validated);
 
-        return redirect('/news');
+        return redirect('/article');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\NewsArticle  $newsArticle
+     * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function show(NewsArticle $newsArticle)
+    public function show(Article $article)
     {
-        return view('news.show', compact('newsArticle'));
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\NewsArticle  $newsArticle
+     * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function edit(NewsArticle $newsArticle)
+    public function edit(Article $article)
     {
         //
     }
@@ -73,10 +73,10 @@ class NewsArticleController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\NewsArticle  $newsArticle
+     * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, NewsArticle $newsArticle)
+    public function update(Request $request, Article $article)
     {
         //
     }
@@ -84,10 +84,10 @@ class NewsArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\NewsArticle  $newsArticle
+     * @param  \App\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function destroy(NewsArticle $newsArticle)
+    public function destroy(Article $article)
     {
         //
     }

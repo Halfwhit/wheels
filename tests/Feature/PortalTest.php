@@ -45,11 +45,11 @@ class PortalTest extends TestCase
     }
 
     protected function whenIVisitTheNewsPage() {
-        $this->response = $this->get('/news');
+        $this->response = $this->get('/article');
     }
 
     protected function thenIWillSeeTheNewsPage() {
-        $this->response->assertViewIs('news.index');
+        $this->response->assertViewIs('article.index');
     }
 
     public function testVisitTheOnlineShowroom() {
